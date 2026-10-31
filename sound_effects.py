@@ -1,6 +1,6 @@
 """
-Natural acoustic sound synthesis for TheraHand.
-Generates warm wooden marimba and ceramic chime tones using harmonic synthesis.
+Natural sound synthesis for Hand Rehab Game.
+Generates calming, pleasant feedback tones using NumPy arrays directly.
 Designed to feel calming, acoustic, and therapeutic.
 """
 

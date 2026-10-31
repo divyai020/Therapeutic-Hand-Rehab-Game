@@ -1,26 +1,27 @@
-Hand Rehab Game : Physical Therapy & Motor Rehabilitation Assistant
+# 🖐️ Hand Rehab Game — Touchless Hand Physical Therapy
 
-A computer-vision-powered interactive rehabilitation prototype designed to assist individuals recovering from hand, wrist, or finger injuries (such as post-fracture cast removal, tendon repair, or mild stroke recovery) in practicing fine-motor pinch-and-sort coordination exercises from the comfort of their laptop.
+A computer-vision-powered interactive rehabilitation game designed to assist individuals recovering from hand, wrist, or finger injuries (such as post-fracture cast removal, tendon repair, or mild stroke recovery) in practicing fine-motor pinch-and-sort coordination exercises from the comfort of their laptop.
 
 ---
 
-## 🌟 Key Rehabilitation & Clinical Design Features
+## 🌟 Key Features
 
 1. **Touchless Interaction via Laptop Webcam:**
    - No costly specialized hardware or wearable glove sensors required.
-   - Uses standard webcams with Google MediaPipe's pre-trained deep-learning hand landmark models.
+   - Uses standard laptop webcams with Google MediaPipe's pre-trained deep-learning hand landmark models.
 
 2. **Tremor Damping (Exponential Moving Average Filter):**
    - Patients recovering from hand trauma or nerve injuries often experience micro-tremors or shakiness.
-   - An integrated EMA smoothing filter stabilizes the virtual cursor and token to prevent patient frustration.
+   - An integrated EMA smoothing filter stabilizes the virtual cursor and ball to prevent frustration.
 
-3. **Dual-Threshold Pinch Hysteresis:**
-   - Prevents "grab chatter" or accidental dropping mid-air. Grasping activates when thumb and index finger approach each other, and requires an intentional release motion.
+3. **Intentional Pinch-to-Grab & Persistence Buffer:**
+   - Dual-threshold hysteresis prevents the ball from dropping mid-air if your grip slightly sways while lifting.
+   - Requires an intentional opening motion to release.
 
-4. **Adjustable Range-of-Motion / Sensitivity Presets:**
-   - **Gentle (Mild / Stiff Hand):** Large objects and generous grasp distance for patients with limited range of motion.
-   - **Standard:** Balanced fine motor training for regular therapy sessions.
-   - **Precision:** Tighter pinch threshold and smaller targets to challenge advanced coordination.
+4. **3 Adaptive Therapy Levels:**
+   - **Easy (Gentle):** 3 large balls (Red, Green, Blue) with a generous pinch zone for stiff joints or early post-cast recovery.
+   - **Medium (Standard):** 4 balls (Red, Green, Blue, Yellow) for active physical therapy.
+   - **Hard (Precision):** 6 smaller balls (adds Orange and Purple) requiring fine finger opposition and endurance.
 
 5. **Quantitative Performance Tracking & Session Reports:**
    - Tracks total repetitions, grasp accuracy %, movement time, and average hold duration.
@@ -33,10 +34,10 @@ A computer-vision-powered interactive rehabilitation prototype designed to assis
 ```text
 Therapeutic_Hand_Rehab_Game/
 │
-├── main.py              # Main application loop, state machine & rendering
+├── main.py              # Main application loop, state machine & camera preview
 ├── hand_tracker.py      # OpenCV webcam capture, MediaPipe HandLandmarker, tremor damping
-├── game_engine.py       # Virtual therapy tokens, target baskets, particles & metrics
-├── ui_components.py     # Clean clinical UI, HUD, grip proximity gauge & summary modals
+├── game_engine.py       # Colored balls, target containers, particles & metrics
+├── ui_components.py     # Hand skeleton visualization, grip meter, HUD & summary modals
 ├── sound_effects.py     # Procedural audio chime synthesis (zero external audio files needed!)
 ├── config.py            # Color palettes, difficulty settings & geometry
 ├── requirements.txt     # Dependency specifications
@@ -52,16 +53,26 @@ Therapeutic_Hand_Rehab_Game/
    cd C:\Users\Divya\Downloads\Therapeutic_Hand_Rehab_Game
    ```
 
-2. Run the application:
+2. Install dependencies:
+   ```powershell
+   pip install -r requirements.txt
+   ```
+
+3. Run the application:
    ```powershell
    python main.py
    ```
 
-3. **In-Session Controls:**
-   - `Pinch Gesture (Thumb + Index)`: Grab and drag virtual tokens
-   - `Separate Fingers`: Release token into target basket
-   - `C`: Toggle between live webcam mirror overlay and minimalist dark clinic mode
-   - `R`: Reset / restart the current exercise session
-   - `M`: Return to main menu
-   - `ESC`: Exit application
+### In-Game Controls:
+| Key / Gesture | Action |
+| :---: | :--- |
+| **Thumb + Index** | Pinch to pick up and drag a ball |
+| **Open Fingers** | Release ball into matching container |
+| **`C`** | Toggle between live camera mirror view and dark mode |
+| **`R`** | Restart / reset current exercise |
+| **`M`** | Return to main menu |
+| **`ESC`** | Exit |
 
+---
+
+*Disclaimer: This is an experimental educational prototype exploring gamification in assistive technology. It is not a certified medical device.*

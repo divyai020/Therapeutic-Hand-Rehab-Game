@@ -23,7 +23,7 @@ STATE_MENU = "MENU"
 STATE_EXERCISE = "EXERCISE"
 STATE_SUMMARY = "SUMMARY"
 
-class TheraHandApp:
+class HandRehabApp:
     def __init__(self):
         pygame.init()
         pygame.display.set_caption("Therapeutic Hand Coordination & Rehabilitation")
@@ -473,5 +473,5 @@ class TheraHandApp:
 
 
 if __name__ == "__main__":
-    app = TheraHandApp()
+    app = HandRehabApp()
     app.run()
