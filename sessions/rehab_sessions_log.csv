@@ -1,0 +1,7 @@
+Timestamp,Difficulty,RepsTarget,CorrectPlacements,AccidentalDrops,AccuracyPct,DurationSec,AvgHoldSec
+2026-10-31 21:58:25,Gentle,4,4,24,14.3,152,3.19
+2026-10-31 22:01:58,Gentle,4,4,15,21.1,77,3.63
+2026-10-31 22:17:46,Easy,4,4,16,20.0,72,2.57
+2026-10-31 22:19:31,Easy,4,4,34,10.5,132,3.0
+2026-10-31 22:44:06,Medium,4,4,15,21.1,85,3.68
+2026-10-31 22:54:11,Easy,3,3,2,60.0,29,3.17
