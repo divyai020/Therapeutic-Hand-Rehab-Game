@@ -1,4 +1,4 @@
-# TheraHand — Physical Therapy & Motor Rehabilitation Assistant
+Hand Rehab Game : Physical Therapy & Motor Rehabilitation Assistant
 
 A computer-vision-powered interactive rehabilitation prototype designed to assist individuals recovering from hand, wrist, or finger injuries (such as post-fracture cast removal, tendon repair, or mild stroke recovery) in practicing fine-motor pinch-and-sort coordination exercises from the comfort of their laptop.
 
@@ -65,25 +65,3 @@ Therapeutic_Hand_Rehab_Game/
    - `M`: Return to main menu
    - `ESC`: Exit application
 
----
-
-## 💼 Suggested LinkedIn Post Template
-
-Feel free to copy and personalize this for your LinkedIn post or video showcase:
-
-> **Excited to share my latest Computer Vision & HealthTech prototype: TheraHand! 🖐️🩺**
->
-> Recovering from a hand injury, surgery, or stroke requires repetitive motor-skill practice—reaching, pinching, holding, and placing objects. Traditional exercises can feel monotonous, and patients often lack objective metrics on their daily progress.
->
-> I built **TheraHand**, an interactive desktop application that transforms laptop webcams into touchless physical therapy tools using Python, OpenCV, MediaPipe, and Pygame.
->
-> **Key Highlights:**
-> 🔹 **Sub-second Hand Tracking:** Tracks 21 anatomical hand landmarks at 60 FPS without requiring physical sensors or gloves.
-> 🔹 **Tremor-Damping EMA Filter:** Stabilizes shaky finger movements so patients aren't penalized by micro-tremors.
-> 🔹 **Pinch Hysteresis:** Prevents grab-and-drop chatter for a natural grasp experience.
-> 🔹 **Adaptive Sensitivity Modes:** Offers Gentle, Standard, and Precision presets tailored to the patient’s range of motion.
-> 🔹 **Therapist Analytics:** Automatically logs reps, accuracy %, hold stability, and completion time to local session reports.
->
-> *Disclaimer: This is an experimental educational prototype exploring gamified computer vision in assistive technology, not a certified medical device.*
->
-> Let me know your thoughts or feedback! #Python #ComputerVision #OpenCV #MediaPipe #HealthTech #PhysicalTherapy #Gamification #Accessibility
