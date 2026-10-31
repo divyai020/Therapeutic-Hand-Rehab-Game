@@ -73,6 +73,3 @@ Therapeutic_Hand_Rehab_Game/
 | **`M`** | Return to main menu |
 | **`ESC`** | Exit |
 
----
-
-*Disclaimer: This is an experimental educational prototype exploring gamification in assistive technology. It is not a certified medical device.*
